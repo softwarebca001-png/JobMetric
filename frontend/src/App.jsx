@@ -88,6 +88,14 @@ function App() {
         }
       />
       <Route
+        path="/recruiter/jobs/:id"
+        element={
+          <ProtectedRoute allowedRoles={['recruiter']}>
+            <RecruiterJobDetail />
+          </ProtectedRoute>
+        }
+      />
+      <Route
         path="/recruiter/jobs/:id/edit"
         element={
           <ProtectedRoute allowedRoles={['recruiter']}>
