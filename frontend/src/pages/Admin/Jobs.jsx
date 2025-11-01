@@ -57,8 +57,8 @@ const AdminJobs = () => {
           requiredSkills: ['JavaScript', 'React', 'Node.js', 'MongoDB'],
           status: 'open',
           applicationCount: 24,
-          postedBy: {
-            name: 'Tech Corp',
+          recruiterId: {
+            fullName: 'Tech Corp',
             email: 'hr@techcorp.com',
           },
           createdAt: '2024-02-01T10:00:00Z',
