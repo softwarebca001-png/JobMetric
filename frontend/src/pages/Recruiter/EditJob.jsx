@@ -167,7 +167,7 @@ const EditJobPage = () => {
         jobData.maxSalary = parseInt(formData.maxSalary)
       }
 
-      const response = await api.patch(`/jobs/${id}`, jobData)
+      const response = await api.put(`/jobs/${id}`, jobData)
       if (response.data.success) {
         toast.success('Job updated successfully!')
         navigate(`/recruiter/jobs/${id}`)
