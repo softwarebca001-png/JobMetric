@@ -329,7 +329,7 @@ const AdminJobs = () => {
                         {job.title}
                       </h3>
                       <p className="text-sm text-gray-600 mb-1">
-                        {job.postedBy.name}
+                        {job.recruiterId?.fullName || 'Unknown Recruiter'}
                       </p>
                     </div>
                     <span
