@@ -125,8 +125,8 @@ const AdminJobs = () => {
           requiredSkills: ['Figma', 'Adobe XD', 'UI Design', 'UX Research'],
           status: 'open',
           applicationCount: 22,
-          postedBy: {
-            name: 'Design Studio',
+          recruiterId: {
+            fullName: 'Design Studio',
             email: 'contact@designstudio.com',
           },
           createdAt: '2024-02-12T15:45:00Z',
