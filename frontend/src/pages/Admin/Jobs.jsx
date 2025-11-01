@@ -108,8 +108,8 @@ const AdminJobs = () => {
           requiredSkills: ['AWS', 'Kubernetes', 'Docker', 'CI/CD'],
           status: 'open',
           applicationCount: 15,
-          postedBy: {
-            name: 'Cloud Solutions',
+          recruiterId: {
+            fullName: 'Cloud Solutions',
             email: 'hiring@cloudsolutions.com',
           },
           createdAt: '2024-02-10T11:00:00Z',
