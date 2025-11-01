@@ -44,13 +44,13 @@ const EditJobPage = () => {
       if (response.data.success) {
         const job = response.data.data.job
         setFormData({
-          title: job.title,
-          description: job.description,
-          requirements: job.requirements,
-          skills: job.skills,
-          location: job.location,
-          jobType: job.jobType,
-          experienceLevel: job.experienceLevel,
+          title: job.title || '',
+          description: job.description || '',
+          requirements: job.requirements || '',
+          skills: job.skills || [],
+          location: job.location || '',
+          jobType: job.jobType || 'full-time',
+          experienceLevel: job.experienceLevel || 'mid',
           minSalary: job.minSalary ? job.minSalary.toString() : '',
           maxSalary: job.maxSalary ? job.maxSalary.toString() : '',
         })
