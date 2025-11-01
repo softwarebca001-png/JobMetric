@@ -84,7 +84,7 @@ const MyJobsPage = () => {
   const handleToggleStatus = async (jobId, currentStatus) => {
     try {
       const newStatus = currentStatus === 'open' ? 'closed' : 'open'
-      const response = await api.patch(`/jobs/${jobId}`, {
+      const response = await api.put(`/jobs/${jobId}`, {
         status: newStatus,
       })
       if (response.data.success) {
