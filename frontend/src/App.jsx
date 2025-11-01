@@ -2,6 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import ProtectedRoute from './components/Route/ProtectedRoute'
 import Login from './pages/Auth/Login'
 import Register from './pages/Auth/Register'
+import VerifyEmail from './pages/Auth/VerifyEmail'
 import ForgotPassword from './pages/Auth/ForgotPassword'
 import ResetPassword from './pages/Auth/ResetPassword'
 import CandidateDashboard from './pages/Candidate/Dashboard'
@@ -11,6 +12,7 @@ import CandidateApplicationDetail from './pages/Candidate/ApplicationDetail'
 import RecruiterDashboard from './pages/Recruiter/Dashboard'
 import RecruiterCreateJob from './pages/Recruiter/CreateJob'
 import RecruiterMyJobs from './pages/Recruiter/MyJobs'
+import RecruiterJobDetail from './pages/Recruiter/JobDetail'
 import RecruiterEditJob from './pages/Recruiter/EditJob'
 import AdminDashboard from './pages/Admin/Dashboard'
 import AdminUsers from './pages/Admin/Users'
@@ -23,6 +25,7 @@ function App() {
       {/* Public Routes */}
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
+      <Route path="/verify-email/:token" element={<VerifyEmail />} />
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/reset-password/:token" element={<ResetPassword />} />
       <Route path="/browse-jobs" element={<BrowseJobs />} />
@@ -83,6 +86,14 @@ function App() {
         element={
           <ProtectedRoute allowedRoles={['recruiter']}>
             <RecruiterMyJobs />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/recruiter/jobs/:id"
+        element={
+          <ProtectedRoute allowedRoles={['recruiter']}>
+            <RecruiterJobDetail />
           </ProtectedRoute>
         }
       />

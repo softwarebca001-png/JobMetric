@@ -31,7 +31,7 @@ const ApplicationsPage = () => {
 
   const fetchApplications = async () => {
     try {
-      const response = await api.get('/applications/candidate/my-applications')
+      const response = await api.get('/applications/my-applications')
       if (response.data.success) {
         setApplications(response.data.data.applications || [])
       }

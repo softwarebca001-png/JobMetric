@@ -36,7 +36,7 @@ const MyJobsPage = () => {
 
   const fetchJobs = async () => {
     try {
-      const response = await api.get('/jobs/recruiter/my-jobs')
+      const response = await api.get('/recruiters/jobs')
       if (response.data.success) {
         setJobs(response.data.data.jobs || [])
       }
@@ -84,7 +84,7 @@ const MyJobsPage = () => {
   const handleToggleStatus = async (jobId, currentStatus) => {
     try {
       const newStatus = currentStatus === 'open' ? 'closed' : 'open'
-      const response = await api.patch(`/jobs/${jobId}`, {
+      const response = await api.put(`/jobs/${jobId}`, {
         status: newStatus,
       })
       if (response.data.success) {

@@ -58,7 +58,7 @@ const CandidateProfile = () => {
         if (profile.currentResumeFileId) {
           // Fetch resume metadata
           try {
-            const resumeResp = await api.get('/candidates/resume')
+            const resumeResp = await api.get('/candidates/profile/resume')
             if (resumeResp.data.success) {
               setResumeFileName(resumeResp.data.data.filename)
             }
@@ -194,7 +194,7 @@ const CandidateProfile = () => {
       const formDataToSend = new FormData()
       formDataToSend.append('resume', resumeFile)
 
-      const response = await api.post('/candidates/resume', formDataToSend, {
+      const response = await api.post('/candidates/profile/resume', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -215,7 +215,7 @@ const CandidateProfile = () => {
 
   const handleDownloadResume = async () => {
     try {
-      const response = await api.get('/candidates/resume/download', {
+      const response = await api.get('/candidates/profile/resume', {
         responseType: 'blob',
       })
       const url = window.URL.createObjectURL(new Blob([response.data]))

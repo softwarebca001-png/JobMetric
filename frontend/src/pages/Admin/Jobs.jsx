@@ -57,8 +57,8 @@ const AdminJobs = () => {
           requiredSkills: ['JavaScript', 'React', 'Node.js', 'MongoDB'],
           status: 'open',
           applicationCount: 24,
-          postedBy: {
-            name: 'Tech Corp',
+          recruiterId: {
+            fullName: 'Tech Corp',
             email: 'hr@techcorp.com',
           },
           createdAt: '2024-02-01T10:00:00Z',
@@ -74,8 +74,8 @@ const AdminJobs = () => {
           requiredSkills: ['React', 'JavaScript', 'CSS', 'Tailwind'],
           status: 'open',
           applicationCount: 18,
-          postedBy: {
-            name: 'StartupXYZ',
+          recruiterId: {
+            fullName: 'StartupXYZ',
             email: 'jobs@startupxyz.com',
           },
           createdAt: '2024-02-05T14:30:00Z',
@@ -91,8 +91,8 @@ const AdminJobs = () => {
           requiredSkills: ['Node.js', 'Express', 'PostgreSQL', 'Docker'],
           status: 'closed',
           applicationCount: 31,
-          postedBy: {
-            name: 'Enterprise Inc',
+          recruiterId: {
+            fullName: 'Enterprise Inc',
             email: 'careers@enterprise.com',
           },
           createdAt: '2024-01-15T09:00:00Z',
@@ -108,8 +108,8 @@ const AdminJobs = () => {
           requiredSkills: ['AWS', 'Kubernetes', 'Docker', 'CI/CD'],
           status: 'open',
           applicationCount: 15,
-          postedBy: {
-            name: 'Cloud Solutions',
+          recruiterId: {
+            fullName: 'Cloud Solutions',
             email: 'hiring@cloudsolutions.com',
           },
           createdAt: '2024-02-10T11:00:00Z',
@@ -125,8 +125,8 @@ const AdminJobs = () => {
           requiredSkills: ['Figma', 'Adobe XD', 'UI Design', 'UX Research'],
           status: 'open',
           applicationCount: 22,
-          postedBy: {
-            name: 'Design Studio',
+          recruiterId: {
+            fullName: 'Design Studio',
             email: 'contact@designstudio.com',
           },
           createdAt: '2024-02-12T15:45:00Z',
@@ -142,8 +142,8 @@ const AdminJobs = () => {
           requiredSkills: ['Python', 'Machine Learning', 'SQL', 'TensorFlow'],
           status: 'closed',
           applicationCount: 27,
-          postedBy: {
-            name: 'Analytics Corp',
+          recruiterId: {
+            fullName: 'Analytics Corp',
             email: 'jobs@analyticscorp.com',
           },
           createdAt: '2024-01-20T10:30:00Z',
@@ -329,7 +329,7 @@ const AdminJobs = () => {
                         {job.title}
                       </h3>
                       <p className="text-sm text-gray-600 mb-1">
-                        {job.postedBy.name}
+                        {job.recruiterId?.fullName || 'Unknown Recruiter'}
                       </p>
                     </div>
                     <span
