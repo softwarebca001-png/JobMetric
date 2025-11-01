@@ -142,8 +142,8 @@ const AdminJobs = () => {
           requiredSkills: ['Python', 'Machine Learning', 'SQL', 'TensorFlow'],
           status: 'closed',
           applicationCount: 27,
-          postedBy: {
-            name: 'Analytics Corp',
+          recruiterId: {
+            fullName: 'Analytics Corp',
             email: 'jobs@analyticscorp.com',
           },
           createdAt: '2024-01-20T10:30:00Z',
