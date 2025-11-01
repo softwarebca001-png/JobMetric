@@ -36,7 +36,7 @@ const MyJobsPage = () => {
 
   const fetchJobs = async () => {
     try {
-      const response = await api.get('/jobs/recruiter/my-jobs')
+      const response = await api.get('/recruiters/jobs')
       if (response.data.success) {
         setJobs(response.data.data.jobs || [])
       }
