@@ -215,7 +215,7 @@ const CandidateProfile = () => {
 
   const handleDownloadResume = async () => {
     try {
-      const response = await api.get('/candidates/resume/download', {
+      const response = await api.get('/candidates/profile/resume', {
         responseType: 'blob',
       })
       const url = window.URL.createObjectURL(new Blob([response.data]))
