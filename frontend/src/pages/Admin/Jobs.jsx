@@ -91,8 +91,8 @@ const AdminJobs = () => {
           requiredSkills: ['Node.js', 'Express', 'PostgreSQL', 'Docker'],
           status: 'closed',
           applicationCount: 31,
-          postedBy: {
-            name: 'Enterprise Inc',
+          recruiterId: {
+            fullName: 'Enterprise Inc',
             email: 'careers@enterprise.com',
           },
           createdAt: '2024-01-15T09:00:00Z',
