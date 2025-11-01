@@ -74,8 +74,8 @@ const AdminJobs = () => {
           requiredSkills: ['React', 'JavaScript', 'CSS', 'Tailwind'],
           status: 'open',
           applicationCount: 18,
-          postedBy: {
-            name: 'StartupXYZ',
+          recruiterId: {
+            fullName: 'StartupXYZ',
             email: 'jobs@startupxyz.com',
           },
           createdAt: '2024-02-05T14:30:00Z',
